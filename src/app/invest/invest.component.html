@@ -1,0 +1,483 @@
+<div  onshow="onResize($event)">
+
+    <div (window:resize)="onResize($event)">
+
+        <!-- <button (click)="encrypt()">encrypt</button>
+        <button (click)="decrypt()">decrypt</button> -->
+   
+      <div *ngIf="colspan > 770">
+        <div class="row">
+            <div class="col-4">
+                <div style="height: 500px; padding-left:10px; padding-right:10px; padding-top:10px; background: gray; width:250px; position: relative; left:254px ">
+                <div style="background: rgba(0, 0, 0, 0.473); height: 50px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.589); border-radius:2px; text-align: center; color:whitesmoke; display: -webkit-box; "> <img style="margin-right: .8rem; position: relative; top:5px" src="./assets/images/account.png" width='36' height='36px' alt=""> <div > <div style="font-weight: 200; margin-top: .2rem;">Musa Omary</div> <div style=" color:ghostwhite;  text-align:initial;">waterd</div></div> </div>
+                <div style="padding:30px"></div>
+                <div class="oncl" style="padding:10px;" (click)="Home()">Home</div>
+            
+                <div class="oncl" style="padding:10px; " (click)="deposit()">Deposit</div>
+            
+                <div class="oncl" style="padding:10px; " (click)="withdraw()">Withdraw</div>
+       
+                <div class="oncl" style="padding:10px; " (click)="affiliate()">Affiliate program</div>
+              
+                <div class="oncl" style="padding:10px; " (click)="Investment()">Investment Plans</div>
+                <div style="padding:30px"></div>
+                <div  style="padding:10px; background: #777575; ">
+                    <div style=" height: 60px;">
+                       <div style="text-align: center; font-size: 12px; color:silver"> Account Info</div>
+                       <div style="font-size:smaller; color: #101010; "> Last Access:</div>
+                       <div style="font-size:smaller; color: #101010; "> Session:</div>
+                    </div>
+                
+                </div>
+                </div>
+            
+            </div>
+
+            <div class="col-8" style="background: rgba(0, 0, 0, 0.465); backdrop-filter: blur(10px);">
+                <div *ngIf="pageChange ==='withdraw'">
+                    <div style="padding: 40px; color:white"> WITHDRAW</div>
+                    <div class="row">
+                        <div class="col-6" style="text-align: center; background:rgba(0, 0, 0, 0.226);  border-right: 3px solid #888888;"> <div style="background: rgba(0, 0, 0, 0.342); color:white; padding: 10px; font-size: 14px;">SELECT ACCOUNT TO WITHDRAW FROM</div>
+                         
+                         <div class="yompo" style=" text-align: start; padding:10px; border-bottom: 1px solid #888888;">Paypal <span style="float:right">:</span> </div> 
+                         <div class="yompo" style=" padding:10px; text-align: start;  padding:10px; border-bottom: 1px solid #888888;">Payeer  <span style="float:right">:</span> </div>
+                         <div class="yompo" style=" padding:10px; text-align: start; padding:10px; border-bottom: 1px solid #888888;">Perfect Money  <span style="float:right">:</span> </div>
+                         <div class="yompo" style=" padding:10px; text-align: start;">Bitcoin  <span style="float:right">:</span> </div>
+                     
+                        
+                        </div>
+                        <!-- <div style="padding: 1px;"></div> -->
+                        <div class="col-6" style="text-align: center;  background:rgba(0, 0, 0, 0.226)"><div style="background: rgba(0, 0, 0, 0.342); color:white; padding: 10px; font-size: 16px;">Withdrawing Amount
+    
+                        </div>
+                        <div style="padding:10px"></div>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroup-sizing-sm">Amount to Withdraw</span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="WITHDRAW" aria-describedby="inputGroup-sizing-sm" style="width:20px">
+                            
+                          </div>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Sugestion</span>
+                            </div>
+                            <textarea class="form-control" aria-label="Sugestion"></textarea>
+                        </div>
+                        <div style="padding:20px"></div>
+                        <button type="button" class="btn btn-outline-success">Submit</button>
+                      </div>
+                <div  style="background: rgba(0, 0, 0, 0.473); padding:10px; position: absolute;  bottom: 0px; width: 100%; height:50px"></div>
+                </div>
+
+
+                </div>
+                <div *ngIf="pageChange =='Investment'">
+                    <div style="background: rgba(0, 0, 0, 0.473); text-align: center; padding:20px; color:white">INVESTMENT PLANS</div>
+                    <div class="row" style="text-align: center;">
+                        <div style="padding: 10px;"></div>
+                        <div class="col" style="background: rgba(255, 255, 255, 0.514); height: 350px; backdrop-filter: blur(10px); border-radius: 2px; box-shadow: 2px 2px px rgba(141, 141, 141, 0.507);">
+                          <div style="background:rgba(0, 0, 0, 0.417); height: 100px;"> <h4 style="text-align: center; padding-top: 20px">Agriculture</h4> </div>
+                          <div style="padding: 5px;"></div>
+                          <!-- <h4 style="text-align: center;">Agriculture</h4> -->
+                          <div style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.466); font-weight: 200;  color:#666; font-family: GothamBook; ">5% Daily</div>
+                          <div style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.466); font-weight: 200;  color:#666; font-family: GothamBook;">Duration: 50 Calendar Days</div>
+                          <div style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.466); font-weight: 200;  color:#666; font-family: GothamBook; ">Principal Return after completion</div>
+                          <div style="padding: 10px;  "></div>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" (click)="Agriculture()">Invest Now</button>
+                        </div>
+                        <div style="padding: 10px;"></div>
+                        <div class="col" style="background: rgba(255, 255, 255, 0.514); height: 350px; backdrop-filter: blur(10px); border-radius: 2px; box-shadow: 2px 2px px rgba(141, 141, 141, 0.507);">
+                          
+                          <div style="background:rgba(0, 0, 0, 0.417); height: 100px;"><h4 style="text-align: center; padding-top: 20px;">Mining</h4> </div>
+                          <div style="padding: 5px;"></div>
+                          
+                          <div style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.466); font-weight: 200;  color:#666; font-family: GothamBook; ">2% Daily</div>
+                          <div style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.466); font-weight: 200;  color:#666; font-family: GothamBook;">Duration: 20 Working Days</div>
+                          <div style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.466); font-weight: 200;  color:#666; font-family: GothamBook; ">Principal Return after completion</div>
+                          <div style="padding: 10px; "></div>
+                          <!-- <h6 style="text-align: center; color: #666; font-weight: lighter;">Mining industry in africa is growing eponentialy and through investment you can have shares which will help you earning decent money while you are away, and this is by you investing on these projects. </h6> -->
+                      <button type="button" class="btn btn-outline-secondary btn-sm">Invest Now</button>
+                        </div>
+                        <div style="padding: 10px;"></div>
+                        <div class="col" style="background: rgba(255, 255, 255, 0.514); height: 350px; backdrop-filter: blur(10px); border-radius: 2px; box-shadow: 2px 2px px rgba(141, 141, 141, 0.507);">
+                          <div style="background: rgba(0, 0, 0, 0.417); height: 100px; "> <h4 style="text-align: center; padding-top:20px">Real Estate</h4> </div>
+                          <div style="padding: 5px;"></div>
+                         
+                          <div style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.466); font-weight: 200;  color:#666; font-family: GothamBook; ">8% Monthly</div>
+                          <div style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.466); font-weight: 200;  color:#666; font-family: GothamBook;">Duration: 90 Calendar Days</div>
+                          <div style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.466); font-weight: 200;  color:#666; font-family: GothamBook; ">Principal Return after completion</div>
+                          <div style="padding: 10px; "></div>
+                          <button type="button" class="btn btn-outline-secondary btn-sm" (click)="Realestate()">Invest Now</button>
+                        </div>
+                        <div style="padding: 40px;"></div>
+                      </div>
+                    
+                </div>
+
+                <div *ngIf="pageChange =='deposit'">
+                
+                    <div style="background: rgba(0, 0, 0, 0.473); text-align: center; padding:20px; color:white">MAKING A DEPOSIT</div>
+                    <div style="padding:10px"></div>
+                    <div class="row">
+
+                        
+                        <div class="col">
+                            <div style="background: rgba(0, 0, 0, 0.39); padding:10px; color:white ; font-family: GothamBook;">Select a Plan</div>
+                            <div style="padding:10px"></div>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                <label *ngIf="button === 'agriculture'" class="btn btn-dark " style="font-weight: 200; font-family: GothamBook;  background:rgb(27, 27, 27)">
+                                  <input type="radio" name="options" id="option1" (click)="agriculturebutton()"> Agriculture
+                                </label>
+                                <label *ngIf="button !== 'agriculture'" class="btn btn-dark " style="font-weight: 200; font-family: GothamBook;">
+                                  <input type="radio" name="options" id="option1" (click)="agriculturebutton()"> Agriculture
+                                </label>
+                                <label *ngIf="button === 'mining'" class="btn btn-dark" style="font-weight: 200; font-family: GothamBook; background:rgb(27, 27, 27)">
+                                  <input type="radio" name="options" id="option2" (click)="Miningbutton()"> Mining
+                                </label>
+                                <label *ngIf="button !== 'mining'" class="btn btn-dark" style="font-weight: 200; font-family: GothamBook;">
+                                  <input type="radio" name="options" id="option2" (click)="Miningbutton()"> Mining
+                                </label>
+                                <label *ngIf="button === 'realestate'"  class="btn btn-dark" style="font-weight: 200; font-family: GothamBook;  background:rgb(27, 27, 27)">
+                                  <input type="radio" name="options" id="option3" (click)="Realestatebutton()"> Real Estate
+                                </label>
+                                <label *ngIf="button !== 'realestate'"  class="btn btn-dark" style="font-weight: 200; font-family: GothamBook;  ">
+                                  <input type="radio" name="options" id="option3" (click)="Realestatebutton()"> Real Estate
+                                </label>
+                              </div>
+                              <div style="padding:10px">
+                                <div class="input-group input-group-sm mb-3">
+                                    
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroup-sizing-sm">Amount to Deposit</span>
+                                    </div>
+                                   
+                                    <input type="number" class="form-control" [value]="amount" (keyup)="validate()" (input)="amount = $event.target.value" style="width:20px">
+                                    
+                                  </div>
+                                  <div style="padding:10px"></div>
+                                   
+                                    <div class="input-group input-group-sm mb-3 d-flex" style="width:60%; margin:center;">
+
+                                       
+
+                                       
+
+                                        
+                                  
+                                        
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                    <button mat-raised-button [matMenuTriggerFor]="menu">Select Processors</button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item  (click)="payeer()">Payeer</button>
+                                        <button mat-menu-item  (click)="perfect()">Perfect Money</button>
+                                        <button mat-menu-item (click)="bitcoin()">Bitcoin</button>
+                                    </mat-menu></div>
+                                    <div class="col">
+                                        <div *ngIf="foode ==='None Selected'" style="background: rgba(0, 0, 0, 0.397); padding: 8px; border: 1px solid white; border-radius: 5px; color: white; text-align: center;">{{foode}}</div>
+                                        <div *ngIf="foode !=='None Selected'" style="background: rgba(0, 0, 0, 0.397); padding: 8px; border: 1px solid green; border-radius: 5px; color: white; text-align: center;">{{foode}}</div>
+
+                                    </div>
+                                </div>
+                                  <div style="padding:10px"></div>
+                                  <div><button *ngIf="status === 'bad'" (click)="submit()" class="btn btn-success btn-sm" style="width:100%" disabled>Submit</button></div>
+                                  <div><button *ngIf="status === 'good'" (click)="submit()" class="btn btn-success btn-sm" style="width:100%" >Submit</button></div>
+                            </div>
+                              
+                        </div>
+                        <div class="col">
+                            <div style="background: rgba(0, 0, 0, 0.39); padding:10px; color:white; font-family: GothamBook; ">Investment  Plans</div>
+                            <div style="padding:10px"></div>
+                            <table class="table table-sm table-bordered table-dark" style="background: rgba(0, 0, 0, 0.589);">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Agriculture</th>
+                                    <th scope="col">Mining</th>
+                                    <th scope="col">Real estate</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>5% Daily</td>
+                                    <td>2% Daily</td>
+                                    <td>8% Monthly</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Principle return after investment</td>
+                                    <td>Principle return after Investment</td>
+                                    <td>Principle return after Investment</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Return on investment 300%</td>
+                                    <td>Return on investment 300%</td>
+                                    <td>Return on investment 300%</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Withdraw Principal at any time</td>
+                                    <td>Withdraw Principal at any time</td>
+                                    <td>Withdraw Principal at any time</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                
+                      </div>
+                    
+                </div>
+                <div *ngIf="pageChange =='confirm'">
+
+                    <div *ngIf="processorTo=='perfect'">
+                        <div style="background: rgba(0, 0, 0, 0.473); text-align: center; padding:20px; color:white">CONFIRM A DEPOSIT</div>
+                    <div style="background: rgba(0, 0, 0, 0.473); padding:10px; color:white">
+                        <div class="row">
+                            <div class="col">
+                                <div style="font-size: larger; text-align: center;">FYLIZ INVESTMENT</div>
+                                <div style="text-align: center; font-weight:100; ">Invest for the future</div>
+                                <div style="text-align: center; font-weight:100; "><img src="./assets/images/Fyliz.png"  width="70px" height="30px" alt=""></div>
+                            </div>
+                            <div class="col" style="text-align: center;">
+                                <form action="https://perfectmoney.is/api/step1.asp" method="POST"> 
+                                    <input type="hidden" name="pid" value="EVTLKZ925EW2O6ATIOJ7L9DP2XYDIZTR">
+                                    <input type="hidden" name="PAYEE_ACCOUNT" value="U23428219">
+                                    <input type="hidden" name="PAYEE_NAME" value="FYLIZ INVESTMENT.">
+                                    <input type="hidden" name="PAYMENT_ID" value="">
+                                    <input type="hidden" name="PAYMENT_AMOUNT" value="10.00">
+                                    <input type="hidden" name="PAYMENT_UNITS" value="USD">
+                                    <input type="hidden" name="SUGGESTED_MEMO" [value]="userf">
+                                    <input type="hidden" name="STATUS_URL" value="">
+                                    <input type="hidden" name="PAYMENT_URL" value="http://localhost:4200/invest?s=success">
+                                    <input type="hidden" name="PAYMENT_URL_METHOD" value="POST">
+                                    <input type="hidden" name="NOPAYMENT_URL" value="http://localhost:4200/invest?s=failed">
+                                    <input type="hidden" name="NOPAYMENT_URL_METHOD" value="POST">
+                                    <input type="hidden" name="BAGGAGE_FIELDS" value="pid">
+                                <button type="submit" class="btn btn-outline-success btn-sm"  style="width:100px; font-weight:100">Confirm</button>
+                                <div style="padding: 5px;"></div>
+                                <button type="button" class="btn btn-outline-danger btn-sm"  style="width:100px; font-weight:100">Cancel</button>
+                                </form>
+                            </div>
+
+                        </div>
+                        
+
+                        
+                    </div>
+                    
+
+  
+                
+                    
+                        
+                    
+                    
+                    </div>
+                    <div *ngIf="processorTo=='bitcoin'">
+                        <div style="background: rgba(0, 0, 0, 0.473); text-align: center; padding:20px; color:white">CONFIRM A DEPOSIT
+                            <div class="row">
+                            
+                                <div class="col" style="color:white">
+                                    <div style="font-size: larger; text-align: center;">FYLIZ INVESTMENT</div>
+                                    <div style="text-align: center; font-weight:100; ">Invest for the future</div>
+                                    <div style="text-align: center; font-weight:100; "><img src="./assets/images/Fyliz.png"  width="70px" height="30px" alt=""></div>
+                                </div>
+                                <div class="col" style="text-align: center;">
+    
+                                    <div style="padding-top:10px ;">
+                                        <style type="text/css"> .btcpay-form { display: inline-flex; align-items: center; justify-content: center; } .btcpay-form--inline { flex-direction: row; } .btcpay-form--block { flex-direction: column; } .btcpay-form--inline .submit { margin-left: 15px; } .btcpay-form--block select { margin-bottom: 10px; } .btcpay-form .btcpay-custom-container{ text-align: center; }.btcpay-custom { display: flex; align-items: center; justify-content: center; } .btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: #DFE0E1; height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto 5px; display: inline-flex; justify-content: center; } .btcpay-form select { -moz-appearance: none; -webkit-appearance: none; appearance: none; color: currentColor; background: transparent; border:1px solid transparent; display: block; padding: 1px; margin-left: auto; margin-right: auto; font-size: 11px; cursor: pointer; } .btcpay-form select:hover { border-color: #ccc; } #btcpay-input-price { -moz-appearance: none; -webkit-appearance: none; border: none; box-shadow: none; text-align: center; font-size: 25px; margin: auto; border-radius: 5px; line-height: 35px; background: #fff; } </style>
+                                            <form method="POST"  action="https://mainnet.demo.btcpayserver.org/api/v1/invoices" class="btcpay-form btcpay-form--block">
+                                                <input type="hidden" name="storeId" value="5oE6qeeq1coYDvUZ1Xkf8FU1fSvNMvHJG8tXgxfFChNM" />
+                                                <input type="hidden" name="price" value="10" />
+                                                <input type="hidden" name="currency" value="USD" />
+                                                <input type="image" class="submit" name="submit" src="https://mainnet.demo.btcpayserver.org/img/paybutton/pay.svg" style="width:209px" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
+                                            </form>
+                                    </div>
+            
+                                </div>
+                            </div>
+                        
+                        
+                        </div>
+
+
+
+
+
+
+
+                        <div style="padding:20px" ></div>
+                        
+
+
+                        
+                    </div>
+                    <div *ngIf="processorTo=='payeer'">
+                        <div style="background: rgba(0, 0, 0, 0.473); text-align: center; padding:20px; color:white">CONFIRM A DEPOSIT
+                            <div class="row">
+                            
+                                <div class="col" style="color:white">
+                                    <div style="font-size: larger; text-align: center;">FYLIZ INVESTMENT</div>
+                                    <div style="text-align: center; font-weight:100; ">Invest for the future</div>
+                                    <div style="text-align: center; font-weight:100; "><img src="./assets/images/Fyliz.png"  width="70px" height="30px" alt=""></div>
+                                </div>
+                                <div class="col" style="text-align: center;">
+    
+                                    <div style="padding-top:10px ;">
+                                        <form method="GET" action="//payeer.com/api/merchant/m.php" target="_top">
+                                            <input type="hidden" name="form_id" value="15953973481123">
+                                            <input type="hidden" name="form_token" value="4fcd936fe61cfbef34c299be2596f7e5"> 
+                                          <input type="hidden" name="m_shop" value="1069745495">
+                                            <input type="hidden" name="m_orderid" value="FS3L4ZEARFFD9Y84L40GR471ABM7GAIX">
+                                            <input type="hidden" name="m_amount" [value]="m_amount"> <input type="hidden" name="m_curr" value="USD">
+                                            <input type="hidden" name="m_desc" value="RGVwb3NpdCB0byBFWCBCT05EUyBMVEQuIFVzZXIgbWFzYW5qYXg=">
+                                            <input type="hidden" name="m_sign" value="C2369AC243571FD770DC6C5199C4059AC71C60618DBDA050E96A432A4D78D085">
+                                           
+            
+                                            <button type="submit" class="btn btn-outline-success btn-sm"  style="width:100px; font-weight:100">Confirm</button>
+                                            <div style="padding: 5px;"></div>
+                                            <button type="button"  class="btn btn-outline-danger btn-sm"  style="width:100px; font-weight:100">Cancel</button>
+                                        </form>
+                                    </div>
+            
+                                </div>
+                            </div>
+                        
+                        
+                        </div>
+                        
+                        
+                        
+
+
+                        
+                    </div>
+                    <div style="padding:10px"></div>
+                    <div class="row">
+
+                        
+                        <div class="col">
+                            <div style="background: rgba(0, 0, 0, 0.39); padding:10px; color:white; font-family: GothamBook; ">
+                                <div><span> Username: </span><span style="font-weight: bolder; font-size: medium; float: right;"> Musa Omary</span></div>
+                                <div style="padding:5px"></div>
+                                <div><span> Plan: </span><span style="font-weight: bolder; font-size: medium; float: right;"> {{button}}</span></div>
+                                <div style="padding:5px"></div>
+                                <div><span> Profit: </span><span style="font-weight: bolder; font-size: medium; float: right;"> 2</span></div>
+                                <div style="padding:5px"></div>
+                                <div><span> Principle withdraw: </span><span style="font-weight: bolder; font-size: medium; float: right;"> Yes</span></div>
+                                <div style="padding:5px"></div>
+                                <div><span> Principle return: </span><span style="font-weight: bolder; font-size: medium; float: right;"> Yes, After 50 days</span></div>
+                                <div style="padding:5px"></div>
+                                <div><span> Deposit Amount: </span><span style="font-weight: bolder; font-size: medium; float: right;"> 10</span></div>
+                                <div style="padding:5px"></div>
+                                <div><span> Deposit Wallet: </span><span style="font-weight: bolder; font-size: medium; float: right;"> {{processorTo}}</span></div>
+                                <div style="padding:5px"></div>
+                                <div><span> usd Value: </span><span style="font-weight: bolder; font-size: medium; float: right;"> 10 usd</span></div>
+                            </div>
+                            
+                              
+                        </div>
+                        <div class="col">
+                            <div style="background: rgba(0, 0, 0, 0.39); padding:10px; color:white; font-family: GothamBook; text-align: center; ">PAYMENT</div>
+                            <div style="padding:10px; color: ghostwhite; text-align: center;">
+                                Please make a payment using your chosen payment system. After clicking "Process" button you will be redirected to the payment gateway.
+                                If you have chosen the payment using cryptocurrencies, transfer the coins to the indicated address.
+                                If you chose payment via Ethereum, please do not send it using contracts / internal transactions. </div>
+                         
+                        </div>
+                
+                      </div>
+                    
+                </div>
+                <div *ngIf="pageChange =='success'">
+                    <div style="padding:10px"></div>
+
+                
+                    <div style="color:white; background:rgba(0, 88, 0, 0.561); padding: 20px; text-align: center;">Transaction successfull</div>
+                    
+                </div>
+                <div *ngIf="pageChange =='failed'">
+                    <div style="padding:10px"></div>
+
+                
+                    <div style="color:white; background:rgba(190, 1, 1, 0.575); padding: 20px; text-align: center;">Transaction failed</div>
+                    
+                </div>
+                <div *ngIf="pageChange =='Home'">
+                    <div class="row">
+                        <div class="col" style="background: rgba(0, 0, 0, 0.376); padding:20px; color:white">$0.00
+                        <p style="font-size: 10px; color:#999">Account Balance</p>
+                        </div>
+                        <div style="padding:10px"></div>
+                        <div class="col" style="background: rgba(0, 0, 0, 0.376); padding:20px; color:white">$0.00
+                            <p style="font-size: 10px; color:#999">Active Deposit</p>
+                        </div>
+                        <div style="padding:10px"></div>
+                        <div class="col" style="background: rgba(0, 0, 0, 0.376); padding:20px; color:white">$0.00
+                            <p style="font-size: 10px; color:#999">Total Earning</p>
+                        </div>
+                        <div style="padding:10px"></div>
+                        <div class="col" style="background: rgba(0, 0, 0, 0.376); padding:20px; color:white">$0.00
+                            <p style="font-size: 10px; color:#999">Total Withdrawn</p>
+                        </div>
+                      </div>
+                      <div style="padding:10px"></div>
+                      <div class="row">
+                        <div class="col" style="background: rgba(0, 0, 0, 0.39); padding:20px">
+                            <div class="yompo" style=" text-align: start; padding:10px; border-bottom: 1px solid #888888;">Name <span style="float:right">Musa Omary</span> </div> 
+                         <div class="yompo" style=" padding:10px; text-align: start;  padding:10px; border-bottom: 1px solid #888888;">Payeer Acc  <span style="float:right">Not set</span> </div>
+                         <div class="yompo" style=" padding:10px; text-align: start; padding:10px; border-bottom: 1px solid #888888;">Perfect Money  <span style="float:right">Not set</span> </div>
+                         <div class="yompo" style=" padding:10px; text-align: start;">Bitcoin  <span style="float:right">Not set</span> </div>
+                        
+                        </div>
+                        <div style="padding:10px;"></div>
+                        <div class="col" style="background: rgba(0, 0, 0, 0.417);  padding:20px"><div class="row" style="color:white"><div class="col hon">Active deposit 0$ <div style="float:right; background:#b20000; width:50px; text-align:center">----</div></div> <div class="col">Account History <div style="float:right; background:#b20000; width:50px; text-align:center">---</div></div></div><div class="row" style="color:white"><div class="col hon">Last deposit  0$ <div style="float:right; background:#b20000; width:50px; text-align:center">---</div></div> <div class="col">- -</div></div><div class="row" style="color:white"><div class="col">Total withdrawn  0$<div style="float:right; background:#b20000; width:50px; text-align:center">---</div></div> <div class="col"></div></div><div style="padding: 10px;"></div><div class="row" style="color:white"><div class="col">Last withdraw  0$ <div style="float:right; background:#b20000; width:50px; text-align:center">---</div></div> <div class="col"></div></div><div class="row" style="color:white"><div class="col">Pending  0$ <div style="float:right; background:#b20000; width:50px; text-align:center">----</div></div> <div class="col"></div></div><div class="row" style="color:white"><div class="col">Total withdrawn  0$<div style="float:right; background:#b20000; width:50px; text-align:center">----</div></div> <div class="col"></div></div></div>
+                        <div  style="background: rgba(0, 0, 0, 0.473);  position: absolute;  bottom: 0px; width: 100%; height:50px"></div>              
+                      </div>  
+                 
+                    </div>
+                <div *ngIf="pageChange =='affiliate'">
+                    <div style="background: rgba(0, 0, 0, 0.486); padding:20px">
+                        <div class="row">
+                            <div class="col" style="color:white; font-size:12px">----No referal</div>
+                            <div class="col" style="color:white; font-size:12px">Your referal 0</div>
+                            <div class="col" style="color:white; font-size:12px">Active referals 0</div>
+                            <div class="col" style="color:white; font-size:12px">Earnings 0</div>
+                          </div>
+                    </div>
+                    
+                </div>
+                
+               
+        </div>
+        <div style="background: rgba(0, 0, 0, 0.473); padding:50px"></div>
+          </div>
+       
+
+
+        <h3>imepungua</h3>
+      
+
+
+    </div>
+
+      <div *ngIf="colspan < 770">
+
+        <h3>imepungua</h3>
+      
+
+ 
+
+          
+
+      
+
+    </div>
+    </div>
+  
+      

@@ -1,0 +1,109 @@
+
+
+<nav (scroll)="onWindowScroll($event);" class=" navbar navbar-expand-md fixed-top filt" style=" padding-top:15px; border-top-left-radius:10px; background:rgba(56, 56, 56, 0.157); border-top-right-radius:10px; box-shadow:0 5px 5px 0 rgba(104, 103, 103, 0.098);" >
+    <!-- <nav class=" navbar navbar-expand-md fixed-top" style="background: linear-gradient(to top right, rgb(255, 255, 255), white); height:60px; box-shadow:1px 3px 3px 1px rgba(100, 93, 93, 0.3);"> -->
+  
+    <div class="container">
+    <style>
+  
+    
+    a{
+      color: rgb(42, 39, 39);
+      font-weight:100;
+      
+    }
+  
+    /* .active{
+      background:#3c3c3c;
+      border-radius: 10px;
+      color: whitesmoke;
+      padding:0.5px
+    } */
+  
+   
+    .a{
+      color: rgb(0, 0, 0);
+      font-weight:100;
+      font-size: 13px;
+      
+      
+    }
+    .dropdown-item{
+      background-color: rgba(255, 255, 255, 0.2);
+  
+    }
+    </style>
+      <a *ngIf="!company_name" class="navbar-brand"  style="color:black">FYLIZ</a>
+      <a *ngIf="company_name" class="navbar-brand"  style="color:black">FYLIZ</a>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+  
+  <div class="menu">
+    <input type="checkbox" id="toggle" />
+    <label id="show-menu" for="toggle">
+      <div class="btn">
+        <i class="material-icons md-36 toggleBtn menuBtn">menu</i>
+        <i class="material-icons md-36 toggleBtn closeBtn">close</i>
+      </div>
+      <div class="btn">
+        <i class="material-icons md-36">photo_camera</i>
+      </div>
+      <div class="btn">
+        <i class="material-icons md-36">photo</i>
+      </div>
+      <div class="btn">
+        <i class="material-icons md-36">music_note</i>
+      </div>
+      <div class="btn">
+        <i class="material-icons md-36">chat_bubble</i>
+      </div>
+      <div class="btn">
+        <i class="material-icons md-36">settings</i>
+      </div>
+      <div class="btn">
+        <i class="material-icons md-36" [routerLink]="['']">home</i>
+      </div>
+      <div class="btn">
+        <i class="material-icons md-36">cloud</i>
+      </div>
+      <div class="btn">
+        <i class="material-icons md-36">videocam</i>
+      </div>
+    </label>
+  </div>
+       
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="#" [routerLink]="['']">Home <span class="sr-only" [routerLinkActive]="['active']">(current)</span></a>
+          </li>
+         
+<!--   
+  
+          <li class="nav-item">
+            <a class="nav-link " href="#" [routerLink]="['/About']" [routerLinkActive]="['active']">About</a>
+          </li>
+          <li class="nav-item" style="font-weight:100;  ">
+            <a  class="nav-link"  [routerLink]="['/Subscriptions']" [routerLinkActive]="['active']">Subscriptions</a>
+          </li> -->
+           
+        </ul>
+  
+        <form class="form-inline mt-2 mt-md-0">
+          <input style="background:rgba(0, 0, 0, 0.201)" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </form>
+       <ul>
+         
+        <!-- <li class="nav-item" style="list-style-type: none;">
+            <a style="cursor:pointer" (click)="check()">{{button}}</a>
+          </li> -->
+          
+        </ul>
+        
+  
+      </div>
+      </div>
+    </nav>
+  
+  

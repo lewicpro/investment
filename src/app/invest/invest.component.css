@@ -1,0 +1,32 @@
+.yompo:hover{
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.349);
+    color: black;
+    border-radius: 5px;
+}
+.yompo{
+    color: white;;
+}
+.oncl:hover{
+    transition: 0.5s;
+    background: #4e4e4e;
+    color: white;
+
+}
+.oncl{
+    background: #777575;
+}
+
+
+
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle), .input-group>.input-group-append:last-child>.input-group-text:not(:last-child), .input-group>.input-group-append:not(:last-child)>.btn, .input-group>.input-group-append:not(:last-child)>.input-group-text, .input-group>.input-group-prepend>.btn, .input-group>.input-group-prepend>.input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background:  rgba(0, 0, 0, 0.342);
+    color:white;
+    border: 2px solid #888888
+}
+
+.hon{
+    color:white
+}

@@ -1,0 +1,111 @@
+<div  onshow="onResize($event)">
+
+    <div (window:resize)="onResize($event)">
+   
+      <div *ngIf="colspan > 770">
+          <div style="position: relative; bottom: -90px; left:300px; font-family: GothamBook;"> <h4 style="padding-left:50px">Invest for the future</h4>
+            <p style="font-family: GothamBook; font-size: 16px;">
+              <li>Be the one to think of the mobility grow, </li> 
+               <li>in wealth and increase your capability</li> 
+            
+            </p>
+            <p style="font-family: GothamBook; font-size: 14px; padding-left:5px; margin:0"> </p>
+        </div>
+
+
+        <div style="position: relative; bottom: -90px; left:1250px;">
+            <p style="color:whitesmoke; font-size: 16px; font-weight:lighter; font-display:initial;"> With fast transaction mobility, Grow with us,</p>
+            <div style="padding-left:100px;"> <button  class="btn btn-prinamry btn-sm" style="width:100px"> Invest</button>
+            </div>
+      </div>
+
+      <div style="height: 500px; background: rgba(0, 0, 0, 0.294); position: relative; top: 200px; box-shadow: 1px 6px 15px silver;">
+        <h3 style="text-align: center; color:whitesmoke; font-weight: 300;">PROJECTS</h3>
+        <div class="row" style="text-align: center;">
+          <div style="padding: 10px;"></div>
+          <div class="col" style="background: rgba(255, 255, 255, 0.514); height: 450px; backdrop-filter: blur(10px); border-radius: 2px; box-shadow: 2px 2px px rgba(141, 141, 141, 0.507);">
+            <div style="background: url('./assets/images/coco.png'); height: 250px; box-shadow: 2px 5px 10px rgba(24, 24, 24, 0.507);"> </div>
+            <div style="padding: 5px;"></div>
+            <h4 style="text-align: center;">Agriculture</h4>
+            <h6 style="text-align: center; color: #666; font-weight: lighter;"> We are working With the peasant and planting different crops for exporting and these crops takes up to three monthes to yield, And after that will be sold and enable yopu to get your principle with the profit. </h6>
+            <button mat-stroked-button (click)="Agriculture()">Invest</button>
+          </div>
+          <div style="padding: 10px;"></div>
+          <div class="col" style="background: rgba(255, 255, 255, 0.514); height: 450px; backdrop-filter: blur(10px); border-radius: 2px; box-shadow: 2px 2px px rgba(141, 141, 141, 0.507);">
+            
+            <div style="background: url('./assets/images/gold.png'); height: 250px; box-shadow: 2px 5px 10px rgba(24, 24, 24, 0.507);"> </div>
+            <div style="padding: 5px;"></div>
+            <h4 style="text-align: center;">Mining</h4>
+            <h6 style="text-align: center; color: #666; font-weight: lighter;">Mining industry in africa is growing eponentialy and through investment you can have shares which will help you earning decent money while you are away, and this is by you investing on these projects. </h6>
+            <button mat-stroked-button (click)="postdata()">Invest</button>
+          </div>
+          <div style="padding: 10px;"></div>
+          <div class="col" style="background: rgba(255, 255, 255, 0.514); height: 450px; backdrop-filter: blur(10px); border-radius: 2px; box-shadow: 2px 2px px rgba(141, 141, 141, 0.507);">
+            <div style="background: url('./assets/images/realestate.png'); height: 250px; box-shadow: 2px 5px 10px rgba(24, 24, 24, 0.507);"> </div>
+            <div style="padding: 5px;"></div>
+            <h4 style="text-align: center;">Real Estate</h4>
+            <h6 style="text-align: center; color: #666; font-weight: lighter;"> Real estate is the growing field in africa where by we build business houses, and rent and by these will be able invest in real estate and will be able to return your principle and the profit, in time you have been investing with us. </h6>
+            <button mat-stroked-button (click)="Realestate()">Invest</button>
+          </div>
+          <div style="padding: 40px;"></div>
+        </div>
+      
+      </div>
+      <div style="padding: 10px;"></div>
+      <div class="coch" style="height: 800px; position: relative; top: 200px; border-bottom: 5px solid red;">
+        <div style="padding: 10px;"></div>
+        <div class="row">
+          <div style="padding: 10px;"></div>
+          <div style="background:rgba(0, 0, 0, 0.349); height: 400px;" class="col xol">
+            <div style="background:rgba(0, 0, 0, 0.363); height: 100px; width: 100%;  text-align: center;"> <h4 style="padding-top:30px; font-weight: 300; color: rgb(199, 199, 199);"> PAYMENT METHODS</h4> </div>
+            <img src="./assets/images/payeer.png" width='80px' height='80px' alt="">
+            Payeer
+
+
+            <div style="border-bottom:2px solid #9a9a9a;"></div>
+            <img src="./assets/images/perfect.png" width='80px' height='80px' alt="Payeer">
+            Perfect Money
+            <img src="./assets/images/paypal.png" width='80px' height='80px' alt="Payeer">
+            Paypal
+            <div style="border-bottom:2px solid #9a9a9a;"></div>
+            <img src="./assets/images/bitcoin.png" width='80px' height='80px' alt="">
+            Bitcoin
+            <div style="border-bottom:2px solid #9a9a9a; "></div>
+          </div>
+          <div style="padding: 10px;"></div>
+          <div  style="background:rgba(0, 0, 0, 0.349); height: 400px;" class="col xol">
+            <div style="background:rgba(0, 0, 0, 0.363); height: 100px; width: 100%;"></div>
+           
+            <div style="border-bottom:2px solid #9a9a9a; padding: 30px;"></div>
+            <div style="border-bottom:2px solid #9a9a9a; padding: 30px;"></div>
+            <div style="border-bottom:2px solid #9a9a9a; padding: 30px;"></div>
+          </div>
+          <div style="padding: 10px;"></div>
+        </div>
+       
+      </div>
+
+      
+
+          
+
+      
+      
+
+    </div>
+
+      <div *ngIf="colspan < 770">
+
+        <h3>imepungua</h3>
+      
+
+ 
+
+          
+
+      
+
+    </div>
+    </div>
+    </div>
+      
